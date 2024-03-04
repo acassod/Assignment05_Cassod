@@ -1,3 +1,5 @@
+from cmath import sqrt
+
 class BasicMathOperations:
     
     def greetUser(self):
@@ -25,11 +27,16 @@ class BasicMathOperations:
             if num2 != 0:
                 return "Quotient: " + str(num1 / num2)
             else:
-                return "Cannot divide by 0"
+                return "Cannot divide by 0."
         else:
             return "Not a valid operator."
         
+    def squareRoot(self):
+        num1 = float(input("Enter the number."))
+        if num1 >= 0:
+            return "Square root: " + str(num1**0.5)
+        else:
+            return "Square root: " + str(sqrt(num1))
+          
 b = BasicMathOperations()
-n = 1
-while(n>0):
-    print(b.performOperation())
+print(b.squareRoot())
