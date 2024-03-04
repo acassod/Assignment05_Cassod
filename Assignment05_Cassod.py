@@ -88,5 +88,13 @@ class BasicMathOperations:
         else:
             return "The legs cannot have negative length."
         
+    def calculateRectangleArea(self):
+        num1 = int(input("Enter the start number."))
+        num2 = int(input("Enter the end number."))
+        if num1 > 0 and num2 > 0:
+            return "Area: " + str(num1*num2)
+        else:
+            return "The sides cannot have negative length."
+        
 b = BasicMathOperations()
-print(b.calculateSquare())
+print(b.calculateRectangleArea())
