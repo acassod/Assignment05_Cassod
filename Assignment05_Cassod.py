@@ -31,14 +31,14 @@ class BasicMathOperations:
         else:
             return "Not a valid operator."
         
-    def squareRoot(self):
+    def calculateSquareRoot(self):
         num1 = float(input("Enter the number."))
         if num1 >= 0:
             return "Square root: " + str(num1**0.5)
         else:
             return "Square root: " + str(sqrt(num1))
         
-    def factorial(self):
+    def calculateFactorial(self):
         num1 = int(input("Enter the number."))
         
         if num1 > 0:
@@ -76,9 +76,17 @@ class BasicMathOperations:
         
         return s
             
-    def square(self):
+    def calculateSquare(self):
         num1 = float(input("Enter the number."))
         return "Sum: " + str(num1**2)
     
+    def calculateSquare(self):
+        num1 = int(input("Enter the start number."))
+        num2 = int(input("Enter the end number."))
+        if num1 > 0 and num2 > 0:
+            return "Hypotenuse: " + str(((num1**2) + (num2**2))**.5)
+        else:
+            return "The legs cannot have negative length."
+        
 b = BasicMathOperations()
-print(b.square())
+print(b.calculateSquare())
