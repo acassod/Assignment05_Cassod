@@ -80,7 +80,7 @@ class BasicMathOperations:
         num1 = float(input("Enter the number."))
         return "Sum: " + str(num1**2)
     
-    def calculateSquare(self):
+    def calculateHypotenuse(self):
         num1 = float(input("Enter the first number."))
         num2 = float(input("Enter the second number."))
         if num1 > 0 and num2 > 0:
@@ -105,4 +105,53 @@ class BasicMathOperations:
         input1 = input("Enter the input.")
         return str(type(input1))
         
+def main():
+    b = BasicMathOperations()
     
+    s = ("\nType a number to choose an operation:"
+          + "\n1: Greeting"
+          + "\n2: Add Numbers"
+          + "\n3: Perform Operation"
+          + "\n4: Calculate Square Root"
+          + "\n5: Calculate Factorial"
+          + "\n6: Count"
+          + "\n7: Calculate Square"
+          + "\n8: Calculate Hypotenuse"
+          + "\n9: Calculate Rectangle Area"
+          + "\n10: Calculate Power"
+          + "\n11: Find Type"
+          + "\n12: Close Program\n\n")
+    
+    userInput = "0"
+    
+    while(userInput != "12"):
+        userInput = input(s)
+        if userInput == "1":
+            print(b.greetUser())
+        elif userInput == "2":
+            print(b.addNumbers())
+        elif userInput == "3":
+            print(b.performOperation())
+        elif userInput == "4":
+            print(b.calculateSquareRoot())
+        elif userInput == "5":
+            print(b.calculateFactorial())
+        elif userInput == "6":
+            print(b.count())
+        elif userInput == "7":
+            print(b.calculateSquare())
+        elif userInput == "8":
+            print(b.calculateHypotenuse())
+        elif userInput == "9":
+            print(b.calculateRectangleArea())
+        elif userInput == "10":
+            print(b.power())
+        elif userInput == "11":
+            print(b.findType())
+        elif userInput == "12":
+            print("Goodbye!")
+        else:
+            print("Please enter one of the options.")
+            
+    
+main()
