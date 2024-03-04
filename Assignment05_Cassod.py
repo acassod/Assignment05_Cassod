@@ -100,6 +100,9 @@ class BasicMathOperations:
         num1 = float(input("Enter the first number."))
         num2 = float(input("Enter the second number."))
         return "Result: " + str(num1**num2)
-     
-b = BasicMathOperations()
-print(b.power())
+    
+    def findType(self):
+        input1 = input("Enter the input.")
+        return str(type(input1))
+        
+    
