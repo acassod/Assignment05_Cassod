@@ -37,6 +37,25 @@ class BasicMathOperations:
             return "Square root: " + str(num1**0.5)
         else:
             return "Square root: " + str(sqrt(num1))
-          
+        
+    def factorial(self):
+        num1 = int(input("Enter the number."))
+        
+        if num1 > 0:
+            f = num1
+            while f > 1:
+                f -= 1
+                num1 *= f
+            return "Factorial: " + str(num1)
+        elif num1 < 0:
+            num1 *= -1
+            f = num1
+            while f > 1:
+                f -= 1
+                num1 *= f
+            return "Factorial: " + str(-1 * num1)
+        else:
+            return "Factorial: 1"
+    
 b = BasicMathOperations()
-print(b.squareRoot())
+print(b.factorial())
