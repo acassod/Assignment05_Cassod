@@ -56,6 +56,25 @@ class BasicMathOperations:
             return "Factorial: " + str(-1 * num1)
         else:
             return "Factorial: 1"
-    
+        
+    def counting(self):
+        num1 = int(input("Enter the start number."))
+        num2 = int(input("Enter the end number."))
+        
+        s = ""
+        
+        if num1 < num2 :
+            while num1 <= num2:
+                s+= str(num1) + " "
+                num1 +=1
+        elif num1 > num2:
+            while num1 >= num2:
+                s+= str(num1) + " "
+                num1 -=1
+        else:
+            s = "The numbers are equal."
+        
+        return s
+            
 b = BasicMathOperations()
-print(b.factorial())
+print(b.counting())
