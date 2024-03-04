@@ -76,5 +76,9 @@ class BasicMathOperations:
         
         return s
             
+    def square(self):
+        num1 = float(input("Enter the number."))
+        return "Sum: " + str(num1**2)
+    
 b = BasicMathOperations()
-print(b.counting())
+print(b.square())
