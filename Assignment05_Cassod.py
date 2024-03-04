@@ -10,8 +10,26 @@ class BasicMathOperations:
         num2 = float(input("Enter the second number."))
         return "Sum: " + str(num1 + num2)
         
+
+    def performOperation(self):
+        num1 = float(input("Enter the first number."))
+        operator = input("Enter the operation (+, -, *, /)")
+        num2 = float(input("Enter the second number."))
+        if operator == "+":
+            return "Sum: " + str(num1 + num2)
+        elif operator == "-":
+            return "Difference: " + str(num1 - num2)
+        elif operator == "*":
+            return "Product: " + str(num1 * num2)
+        elif operator == "/":
+            if num2 != 0:
+                return "Quotient: " + str(num1 / num2)
+            else:
+                return "Cannot divide by 0"
+        else:
+            return "Not a valid operator."
         
 b = BasicMathOperations()
-print(b.addNumbers())
-
-    
+n = 1
+while(n>0):
+    print(b.performOperation())
