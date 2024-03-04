@@ -81,20 +81,25 @@ class BasicMathOperations:
         return "Sum: " + str(num1**2)
     
     def calculateSquare(self):
-        num1 = int(input("Enter the start number."))
-        num2 = int(input("Enter the end number."))
+        num1 = float(input("Enter the first number."))
+        num2 = float(input("Enter the second number."))
         if num1 > 0 and num2 > 0:
             return "Hypotenuse: " + str(((num1**2) + (num2**2))**.5)
         else:
             return "The legs cannot have negative length."
         
     def calculateRectangleArea(self):
-        num1 = int(input("Enter the start number."))
-        num2 = int(input("Enter the end number."))
+        num1 = float(input("Enter the first number."))
+        num2 = float(input("Enter the second number."))
         if num1 > 0 and num2 > 0:
             return "Area: " + str(num1*num2)
         else:
             return "The sides cannot have negative length."
         
+    def power(self):
+        num1 = float(input("Enter the first number."))
+        num2 = float(input("Enter the second number."))
+        return "Result: " + str(num1**num2)
+     
 b = BasicMathOperations()
-print(b.calculateRectangleArea())
+print(b.power())
